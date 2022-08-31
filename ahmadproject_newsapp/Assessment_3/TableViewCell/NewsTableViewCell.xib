@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsTableViewCell" id="KGk-i7-Jjw" customClass="NewsTableViewCell" customModule="Assessment_3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dad-Qj-4fp">
+                        <rect key="frame" x="10" y="7" width="90" height="86"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="YrB-aB-cPr"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SampleTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlU-ry-VR4">
+                        <rect key="frame" x="110" y="10" width="95.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMd-Hw-M5H">
+                        <rect key="frame" x="110" y="38" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9w-Et-Byx">
+                        <rect key="frame" x="69.5" y="65.5" width="26.5" height="23.5"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal">
+                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                        </state>
+                        <state key="selected">
+                            <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
+                        </state>
+                        <state key="highlighted" image="heart.fill" catalog="system"/>
+                        <connections>
+                            <action selector="favButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gZ6-Ua-IR5"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SlU-ry-VR4" secondAttribute="trailing" constant="10" id="15y-qj-Hbg"/>
+                    <constraint firstItem="uMd-Hw-M5H" firstAttribute="leading" secondItem="dad-Qj-4fp" secondAttribute="trailing" constant="10" id="1J3-kG-hhq"/>
+                    <constraint firstItem="dad-Qj-4fp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="8yk-qF-GCQ"/>
+                    <constraint firstItem="uMd-Hw-M5H" firstAttribute="top" secondItem="SlU-ry-VR4" secondAttribute="bottom" constant="7.5" id="BfF-SY-cgA"/>
+                    <constraint firstItem="SlU-ry-VR4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ETo-5D-XR4"/>
+                    <constraint firstItem="R9w-Et-Byx" firstAttribute="trailing" secondItem="dad-Qj-4fp" secondAttribute="trailing" constant="-4" id="Ncw-7E-AKq"/>
+                    <constraint firstAttribute="bottom" secondItem="dad-Qj-4fp" secondAttribute="bottom" constant="7" id="Pv8-7X-E2V"/>
+                    <constraint firstItem="dad-Qj-4fp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="QCN-wK-irv"/>
+                    <constraint firstItem="SlU-ry-VR4" firstAttribute="leading" secondItem="dad-Qj-4fp" secondAttribute="trailing" constant="10" id="a45-wU-1Rk"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uMd-Hw-M5H" secondAttribute="bottom" constant="10" id="b0s-ca-Uli"/>
+                    <constraint firstItem="R9w-Et-Byx" firstAttribute="bottom" secondItem="dad-Qj-4fp" secondAttribute="bottom" constant="-4" id="caN-Fp-Pyi"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uMd-Hw-M5H" secondAttribute="trailing" constant="10" id="eXx-ae-pCV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favButton" destination="R9w-Et-Byx" id="z31-ui-kQK"/>
+                <outlet property="newsDescription" destination="uMd-Hw-M5H" id="LNv-EH-Awk"/>
+                <outlet property="newsImageView" destination="dad-Qj-4fp" id="UZe-ri-Ia5"/>
+                <outlet property="newsTitle" destination="SlU-ry-VR4" id="hMK-dv-fHZ"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
